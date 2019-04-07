@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <item
-        android:id="@+id/search"
-        android:title="Search"
-        android:icon="@drawable/icon_search_frag"
-        />
+    android:id="@+id/search"
+    android:title="Search"
+    android:icon="@drawable/icon_search_frag"
+    />
 
     <item android:title="Class"
         android:id="@+id/classes"

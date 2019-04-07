@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pcon.hobbo.Models.SearchFragmentItemsModel;
@@ -12,8 +13,6 @@ import com.pcon.hobbo.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SearchListFragmentAdapter extends RecyclerView.Adapter<SearchListFragmentAdapter.SearchListFragmentViewHolder> {
 
@@ -42,8 +41,9 @@ public class SearchListFragmentAdapter extends RecyclerView.Adapter<SearchListFr
         searchListFragmentViewHolder.imageView.setImageResource(curr.getmItemImage());
         searchListFragmentViewHolder.itemName.setText(curr.getmItemName());
         searchListFragmentViewHolder.itemAddress.setText(curr.getmItemAddress());
-        searchListFragmentViewHolder.itemActiveMembers.setText(curr.getmItemActiveMembers());
-        searchListFragmentViewHolder.itemRating.setText(curr.getmItemRating());
+        searchListFragmentViewHolder.itemActiveMembers.setText(curr.getmItemActiveMembers()+" Active Members");
+        //searchListFragmentViewHolder.numberOfRatings.setText(String.valueOf(curr.getNumberOfRatings())+" Ratings");
+        searchListFragmentViewHolder.rating.setText(curr.getmItemRating()+"");
     }
 
     @Override
@@ -52,11 +52,12 @@ public class SearchListFragmentAdapter extends RecyclerView.Adapter<SearchListFr
     }
 
     public class SearchListFragmentViewHolder extends RecyclerView.ViewHolder {
-        public CircleImageView imageView;
+        public ImageView imageView;
         public TextView itemName;
         public TextView itemAddress;
         public TextView itemActiveMembers;
-        public TextView itemRating;
+        public TextView numberOfRatings;
+        public TextView rating;
 
         public SearchListFragmentViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,7 +65,8 @@ public class SearchListFragmentAdapter extends RecyclerView.Adapter<SearchListFr
             itemName=itemView.findViewById(R.id.topic);
             itemAddress=itemView.findViewById(R.id.address);
             itemActiveMembers=itemView.findViewById(R.id.activeMembers);
-            itemRating=itemView.findViewById(R.id.rating);
+            //numberOfRatings=itemView.findViewById(R.id.numberOfRatings);
+            rating=itemView.findViewById(R.id.rating);
         }
     }
 }

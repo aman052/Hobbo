@@ -5,7 +5,16 @@ public class SearchFragmentItemsModel {
     private String mItemName;
     private String mItemAddress;
     private String mItemActiveMembers;
-    private String mItemRating;
+    private Float mItemRating;
+    private int numberOfRatings;
+
+    public int getNumberOfRatings() {
+        return numberOfRatings;
+    }
+
+    public void setNumberOfRatings(int numberOfRatings) {
+        this.numberOfRatings = numberOfRatings;
+    }
 
     public int getmItemImage() {
         return mItemImage;
@@ -39,19 +48,20 @@ public class SearchFragmentItemsModel {
         this.mItemActiveMembers = mItemActiveMembers;
     }
 
-    public String getmItemRating() {
+    public float getmItemRating() {
        return mItemRating;
     }
 
-    public void setmItemRating(String mItemRating) {
+    public void setmItemRating(Float mItemRating) {
         this.mItemRating = mItemRating;
     }
 
-    public SearchFragmentItemsModel(int mItemImage, String mItemName, String mItemAddress, String mItemActiveMembers, String mItemRating) {
+    public SearchFragmentItemsModel(int mItemImage, String mItemName, String mItemAddress, String mItemActiveMembers,int numberOfRatings, Float mItemRating) {
         this.mItemImage = mItemImage;
         this.mItemName = mItemName;
         this.mItemAddress = mItemAddress;
         this.mItemActiveMembers = mItemActiveMembers;
         this.mItemRating = mItemRating;
+        this.numberOfRatings=numberOfRatings;
     }
 }

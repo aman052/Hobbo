@@ -1,71 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_margin="10dp">
 <LinearLayout android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="#fff"
+    >
 <View
     android:background="@color/colorPrimary"
     android:layout_width="match_parent"
-    android:paddingLeft="30dp"
+   android:layout_marginLeft="90dp"
     android:layout_height="2dp"/>
 
-<LinearLayout
-    android:orientation="horizontal"
-    android:weightSum="5"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="3dp">
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/search_list_image"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="160dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:elevation="5dp"
-        android:src="@drawable/ic_plus" />
-
     <LinearLayout
-        android:id="@+id/search_list_container"
-        android:layout_width="0dp"
-        android:orientation="vertical"
-        android:layout_height="160dp"
-        android:layout_weight="3">
-        <TextView
-            android:id="@+id/topic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:lines="1"
-            android:padding="2dp"
-            android:text="Dance Fusion Academy"
-            android:textSize="@dimen/headerText"
-            android:textStyle="bold" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:weightSum="4">
 
-        <TextView
-            android:id="@+id/address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4th street,Kormangla" />
+        <ImageView
+            android:id="@+id/search_list_image"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@drawable/ic_plus" />
 
-        <TextView
-            android:id="@+id/activeMembers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:padding="3dp"
-            android:text="45 active members" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/search_list_rating"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="160dp">
-        <TextView
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4.5 ratings" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/search_list_container"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_weight="3"
+            android:background="#fff"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:padding="2dp"
+                android:text="Dance Fusion Academy"
+                android:textSize="@dimen/headerText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/address"
+                android:padding="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4th street,Kormangla"
+                android:textSize="@dimen/normalText"/>
+
+            <TextView
+                android:id="@+id/offers"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="0dp"
+                android:padding="3dp"
+                android:textSize="@dimen/normalText"
+                android:text="" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/colorAccent"
+                />
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#fff"
+                android:weightSum="6">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_star_black_24dp"/>
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="4.1"
+                    android:padding="3dp"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/activeMembers"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="match_parent"
+                    android:text="45 active members"
+                    android:padding="3dp"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
 </LinearLayout>
-</LinearLayout>
+</android.support.v7.widget.CardView>
